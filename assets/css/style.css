@@ -1,16 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
 
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
     /**
@@ -1469,7 +1457,7 @@ textarea.form-input::-webkit-resizer {
    * #SIDEBAR
    */
     .sidebar {
-        max-height: 180px;
+        max-height: 220px;
         margin-bottom: 30px;
     }
     .sidebar.active {
