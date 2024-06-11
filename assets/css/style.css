@@ -1,4 +1,16 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
 
+
+/**
+ * copyright 2022 @codewithsadee
+ */
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
 
 :root {
     /**
@@ -289,7 +301,7 @@ main {
 
 .sidebar {
     margin-bottom: 15px;
-    max-height: 112px;
+    max-height: 160px;
     overflow: hidden;
     transition: var(--transition-2);
 }
