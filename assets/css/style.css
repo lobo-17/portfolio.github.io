@@ -1998,3 +1998,73 @@ mark.blue {
     color: #0000A0;
     background: none;
 }
+/* pdf */
+#pdf-slideshow {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+.arrow-left {
+    left: 10px;
+}
+.arrow-right {
+    right: 10px;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    #pdf-slideshow {
+        height: 400px; /* Adjust the height for mobile screens */
+    }
+    .arrow {
+        padding: 10px; /* Decrease the padding for mobile screens */
+        font-size: 18px; /* Decrease the font size for mobile screens */
+    }
+    .arrow-left {
+        left: 10px; /* Adjust the distance from the left for mobile screens */
+    }
+    .arrow-right {
+        right: 10px; /* Adjust the distance from the right for mobile screens */
+    }
+    #page-indicator {
+        bottom: 10px; /* Adjust the distance from the bottom for mobile screens */
+        right: 10px; /* Adjust the distance from the right for mobile screens */
+        padding: 5px; /* Decrease the padding for mobile screens */
+        font-size: 14px; /* Decrease the font size for mobile screens */
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 448px) {
+    #pdf-slideshow {
+        height: 300px; /* Adjust the height for mobile screens */
+    }
+    .arrow {
+        padding: 10px; /* Decrease the padding for mobile screens */
+        font-size: 18px; /* Decrease the font size for mobile screens */
+    }
+    .arrow-left {
+        left: 10px; /* Adjust the distance from the left for mobile screens */
+    }
+    .arrow-right {
+        right: 10px; /* Adjust the distance from the right for mobile screens */
+    }
+    #page-indicator {
+        bottom: 10px; /* Adjust the distance from the bottom for mobile screens */
+        right: 10px; /* Adjust the distance from the right for mobile screens */
+        padding: 5px; /* Decrease the padding for mobile screens */
+        font-size: 14px; /* Decrease the font size for mobile screens */
+    }
+}

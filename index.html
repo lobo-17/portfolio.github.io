@@ -10,7 +10,7 @@
     <!--
     - favicon
   -->
-    <link rel="shortcut icon" href="./assets/images/dp4.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/dp.png" type="image/x-icon">
 
     <!--
     - custom css link
@@ -26,6 +26,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- Include pdf.js library -->
+    <script type="module">
+        import * as pdfjsLib from './build/pdf.mjs';
+        pdfjsLib.GlobalWorkerOptions.workerSrc = './build/pdf.worker.mjs';
+        window.pdfjsLib = pdfjsLib;
+    </script>
+
+    <!-- Include Ionicons library -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPD3358BFQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NPD3358BFQ');
+    </script>
 </head>
 
 <body>
@@ -92,7 +115,69 @@
                 <a href="https://bit.ly/DUCS-Elixir" target="_blank">
                     <img src="./assets/images/ducsLogoWhilte.png" alt="BCIWiki" width="37" height="35" style="margin-left: 7px;">
                 </a>
+
             </li>
+            <!-- <ul class="contact-list">
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">LinkedIn</p>
+                        <a href="https://www.linkedin.com/in/your-profile" class="contact-link">linkedin.com/in/your-profile</a>
+                    </div>
+                </li>
+            
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">GitHub</p>
+                        <a href="https://github.com/your-profile" class="contact-link">github.com/your-profile</a>
+                    </div>
+                </li>
+            
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Google Cloud</p>
+                        <a href="https://cloud.google.com/your-profile" class="contact-link">cloud.google.com/your-profile</a>
+                    </div>
+                </li>
+            
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Azure</p>
+                        <a href="https://azure.microsoft.com/your-profile" class="contact-link">azure.microsoft.com/your-profile</a>
+                    </div>
+                </li>
+            
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <i class="fab fa-kaggle"></i>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Kaggle</p>
+                        <a href="https://www.kaggle.com/your-profile" class="contact-link">kaggle.com/your-profile</a>
+                    </div>
+                </li>
+            
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <i class="fab fa-medium"></i>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Medium</p>
+                        <a href="https://medium.com/@your-profile" class="contact-link">medium.com/@your-profile</a>
+                    </div>
+                </li>
+            </ul>-->
 
 
             <div class="sidebar-info_more">
@@ -104,7 +189,7 @@
                     <li class="contact-item">
 
                         <div class="icon-box">
-                            <i class="fab fa-envelope"></i>
+                            <ion-icon name="mail"></ion-icon>
                         </div>
 
                         <div class="contact-info">
@@ -118,8 +203,7 @@
                     <li class="contact-item">
 
                         <div class="icon-box">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
+<ion-icon name="phone-portrait-outline"></ion-icon>                        </div>
 
                         <div class="contact-info">
                             <p class="contact-title">Phone</p>
@@ -132,7 +216,7 @@
                     <li class="contact-item">
 
                         <div class="icon-box">
-                            <i class="far fa-calendar-alt"></i>
+                            <ion-icon name="finger-print-outline"></ion-icon>
                         </div>
 
                         <div class="contact-info">
@@ -146,7 +230,7 @@
                     <li class="contact-item">
 
                         <div class="icon-box">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <ion-icon name="location"></ion-icon>
                         </div>
                         
 
@@ -217,12 +301,13 @@
                         <button class="navbar-link " data-nav-link>Achievements</button>
                     </li>
                     <li class="navbar-item">
-                        <button class="navbar-link " data-nav-link>Resume</button>
+                        <button class="navbar-link " data-nav-link>Gallery</button>
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Portfolio</button>
+                        <button class="navbar-link" data-nav-link>Projects</button>
                     </li>
+
                     <!--<li class="navbar-item">
                         <button class="navbar-link" data-nav-link>Contact</button>
                     </li>
@@ -507,7 +592,7 @@
 
             <div class="title-wrapper">
                 <div class="icon-box">
-                    <ion-icon name="laptop-outline"></ion-icon>
+                    <ion-icon name="calendar-outline"></ion-icon>
                 </div>
 
                 <h3 class="h3">Workshops/Meetups Attended</h3>
@@ -1139,23 +1224,117 @@
         - #RESUME
       -->
 
-            <article class="resume" data-page="resume">
-                <!--<marquee style="color:hsl(45, 100%, 72%);">Please Visit on Laptop/PC</marquee>-->
-
-                <header>
-                    <h2 class="h2 article-title">Resume</h2>
-                </header>
-                
-                <li class="certifications-item">
-                    <a href="">
-                        <img src="./assets/images/cover2.png" alt="certifications logo" tyle="border-radius: 20px;">
-                    </a>
-                </li>
-                <li class="certifications-item">
-                    <a href="">
-                        <img src="./assets/images/cover1.png" alt="certifications logo" tyle="border-radius: 20px;">
-                    </a>
-                </li>
+      <article class="resume" data-page="gallery">
+        <header>
+            <h2 class="h2 article-title">Gallery</h2>
+        </header>
+        <div id="pdf-slideshow">
+            <!-- PDF pages will be rendered here -->
+            <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
+            <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+            <div id="page-indicator" style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0, 0, 0, 0.5); color: white; padding: 5px; border-radius: 5px;">
+                <!-- Page indicator will be updated here -->
+            </div>
+        </div>
+    </article>
+    
+    <script type="module">
+        const url = './assets/images/collage.pdf'; // Path to your PDF file
+        const container = document.getElementById('pdf-slideshow');
+        const pageIndicator = document.getElementById('page-indicator');
+        let pdfDoc = null;
+        let pages = [];
+        let intervalId;
+        let index = 0;
+        const intervalTime = 2000; // Increase the timer to 3 seconds
+    
+        // Load the PDF
+        pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+            console.log('PDF loaded');
+            pdfDoc = pdfDoc_;
+            for (let i = 1; i <= pdfDoc.numPages; i++) {
+                renderPage(i);
+            }
+        }).catch(function(error) {
+            console.error('Error loading PDF:', error);
+        });
+    
+        // Render a page
+        function renderPage(num) {
+            pdfDoc.getPage(num).then(function(page) {
+                console.log('Rendering page', num);
+                const viewport = page.getViewport({ scale: 1.5 });
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+    
+                const renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+                const renderTask = page.render(renderContext);
+    
+                renderTask.promise.then(function() {
+                    console.log('Page rendered', num);
+                    pages.push(canvas.toDataURL());
+                    if (pages.length === pdfDoc.numPages) {
+                        startSlideshow();
+                    }
+                }).catch(function(error) {
+                    console.error('Error rendering page', num, error);
+                });
+            }).catch(function(error) {
+                console.error('Error getting page', num, error);
+            });
+        }
+    
+        // Start the slideshow
+        function startSlideshow() {
+            console.log('Starting slideshow');
+            intervalId = setInterval(nextSlide, intervalTime);
+            updateSlide();
+        }
+    
+        // Show the next slide
+        function nextSlide() {
+            index = (index + 1) % pages.length;
+            updateSlide();
+        }
+    
+        // Show the previous slide
+        function prevSlide() {
+            index = (index - 1 + pages.length) % pages.length;
+            updateSlide();
+        }
+    
+        // Update the slide
+        function updateSlide() {
+            container.style.backgroundImage = `url(${pages[index]})`;
+            container.style.backgroundSize = 'contain';
+            container.style.backgroundRepeat = 'no-repeat';
+            container.style.backgroundPosition = 'center';
+            pageIndicator.textContent = `Page ${index + 1} / ${pages.length}`;
+        }
+    
+        // Pause the slideshow
+        function pauseSlideshow() {
+            clearInterval(intervalId);
+        }
+    
+        // Resume the slideshow
+        function resumeSlideshow() {
+            intervalId = setInterval(nextSlide, intervalTime);
+        }
+    
+        // Add event listeners for pause and resume
+        container.addEventListener('mouseenter', pauseSlideshow);
+        container.addEventListener('mouseleave', resumeSlideshow);
+    
+        // Attach functions to the window object to make them globally accessible
+        window.nextSlide = nextSlide;
+        window.prevSlide = prevSlide;
+    </script>
                 <!--<li>
                     <br>
                     <div style="display: flex; justify-content: center; align-items: center;">
@@ -1375,10 +1554,10 @@
         - #PORTFOLIO
       -->
 
-            <article class="portfolio" data-page="portfolio">
+            <article class="portfolio" data-page="projects">
                 <!--<marquee style="color:hsl(45, 100%, 72%);">Please Visit on Laptop/PC</marquee>-->
                 <header>
-                    <h2 class="h2 article-title">Project Reports</h2>
+                    <h2 class="h2 article-title">Projects</h2>
                 </header>
 
                 <section class="projects" style="overflow-x: hidden;">
@@ -1511,6 +1690,12 @@
                                 <embed class="project-pdf" src="./assets/images/new_c/Data Analysis Pitch Deck & Presentation.pdf" type="application/pdf">
                             </div>
                         </li>
+                        <li>
+                            <!-- Embed YouTube Video -->
+                            <div class="video-container">
+                                <iframe height="215" src="https://www.youtube.com/embed/6fhKGTTxetQ" frameborder="5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </li>
                     </ul>
                     
 
@@ -1638,6 +1823,10 @@
 
 
 
+<!-- Visitor Counter -->
+<div id="sfcg5zpp9e2rd6xbtz6alegkn9kczgzd4n4"></div>
+    <script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=g5zpp9e2rd6xbtz6alegkn9kczgzd4n4&down=async" async></script>
+    <noscript><a href="https://www.freecounterstat.com" title="page view counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=g5zpp9e2rd6xbtz6alegkn9kczgzd4n4" border="0" title="page view counter" alt="page view counter"></a></noscript>
 
 
 
