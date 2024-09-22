@@ -1439,7 +1439,7 @@ textarea.form-input::-webkit-resizer {
    */
     .sidebar,
     article {
-        width: 520px;
+        width: auto;
         margin-inline: auto;
         padding: 30px;
     }
@@ -1458,8 +1458,8 @@ textarea.form-input::-webkit-resizer {
         font-size: 18px;
     }
     .resume[data-page="gallery"] {
-        height: 960px; /* Custom height */
-        width: 520px; /* Custom width */
+        height: 760px; /* Custom height */
+        width: auto; /* Custom width */
         margin: 0 auto; /* Center the container */
         box-sizing: border-box; /* Include padding and border in the element's total width and height MMMMMMMMMMMMMMMMMMMOOOOOOOOBBBBBBBBBBBIIILLLLLLLLLLLEEEEEEEEEE*/
         border-radius: 15px; /* Curve the edges */
@@ -1485,7 +1485,7 @@ textarea.form-input::-webkit-resizer {
    * #SIDEBAR
    */
     .sidebar {
-        max-height: 220px;
+        max-height: 265px;
         margin-bottom: 30px;
     }
     .sidebar.active {
@@ -2079,9 +2079,9 @@ mark.blue {
     height: 500px;
     overflow: hidden;
     position: relative;
-    transform: scale(1.6); /* Zoom in the content */
+    transform: scale(1.2); /* Zoom in the content */
     transform-origin: center; /* Ensure the zoom is centered */
-    margin-top: 180px;
+    margin-top: 70px;
 }
 .arrow {
     position: absolute;
@@ -2141,10 +2141,10 @@ mark.blue {
         font-size: 20px; /* Decrease the font size for mobile screens */
     }
     .arrow-left {
-        left: 100px; /* Adjust the distance from the left for mobile screens */
+        left: 8px; /* Adjust the distance from the left for mobile screens MMMMMMMMMMMMMMMMOOOOOOOOOOOOOOBIIIIIIIIIILEEE */ 
     }
     .arrow-right {
-        right: 100px; /* Adjust the distance from the right for mobile screens */
+        right: 8px; /* Adjust the distance from the right for mobile screens */
     }
     #page-indicator {
         bottom: 2px; /* Adjust the distance from the bottom for mobile screens */
