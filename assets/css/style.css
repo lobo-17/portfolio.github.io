@@ -1965,7 +1965,7 @@ textarea.form-input::-webkit-resizer {
     }
     .resume[data-page="gallery"] {
         height: 800px; /* Custom height */
-        width: 950px; /* Custom width */
+        width: 100%; /* Custom width */
         margin: 0 auto; /* Center the container */
         box-sizing: border-box; /* Include padding and border in the element's total width and height */
         border-radius: 15px; /* Curve the edges */
