@@ -3,15 +3,6 @@
 \*-----------------------------------*/
 
 
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
     /**
    * colors
@@ -490,7 +481,7 @@ main {
 \*-----------------------------------*/
 
 .about .article-title {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .about-text {
@@ -830,8 +821,17 @@ main {
 \*-----------------------------------*/
 
 .article-title {
-    margin-bottom: 30px;
+    margin-bottom: 55px;
 }
+
+.resume[data-page="gallery"] {
+    height: 740px; /* Custom height */
+    width: 100%; /* Custom width */
+    margin: 0 auto; /* Center the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-radius: 15px; /* Curve the edges */
+}
+
 
 
 /**
@@ -1418,7 +1418,7 @@ textarea.form-input::-webkit-resizer {
  * responsive larger than 580px screen
  */
 
-@media (min-width: 580px) {
+@media (min-width: 380px) {
     /**
    * CUSTOM PROPERTY
    */
@@ -1457,6 +1457,23 @@ textarea.form-input::-webkit-resizer {
         border-radius: 12px;
         font-size: 18px;
     }
+    .resume[data-page="gallery"] {
+        height: 920px; /* Custom height */
+        width: 520px; /* Custom width */
+        margin: 0 auto; /* Center the container */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        border-radius: 15px; /* Curve the edges */
+    }
+    /* Add this to your style.css file */
+.page-indicator {
+    position: absolute;
+    bottom: 10px;
+    right: 1000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0px;
+    border-radius: 5px;
+}
     /**
    * #MAIN
    */
@@ -1725,6 +1742,22 @@ textarea.form-input::-webkit-resizer {
     .navbar-link {
         --fs-8: 15px;
     }
+    .resume[data-page="gallery"] {
+        height: 800px; /* Custom height */
+        width: 700px; /* Custom width */
+        margin: 0 auto; /* Center the container */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        border-radius: 15px; /* Curve the edges */
+    }
+    .page-indicator {
+        position: absolute;
+        bottom: 10px;
+        right: 1000px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 0px;
+        border-radius: 5px;
+    }
     /**
    * ABOUT
    */
@@ -1795,6 +1828,8 @@ textarea.form-input::-webkit-resizer {
  * responsive larger than 1024px screen
  */
 
+ 
+
 @media (min-width: 1024px) {
     /**
    * CUSTOM PROPERTY
@@ -1825,28 +1860,52 @@ textarea.form-input::-webkit-resizer {
         position: relative;
         width: max-content;
         margin: auto;
+
+    }
+
+    .resume[data-page="gallery"] {
+        height: 800px; /* Custom height */
+        width: 950px; /* Custom width */
+        margin: 0 auto; /* Center the container */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        border-radius: 15px; /* Curve the edges */
+    }
+    .page-indicator {
+        position: fixed;
+        bottom: 10px;
+        right: 1000px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 0px;
+        border-radius: 5px;
     }
     /**
    * NAVBAR
    */
-    .navbar {
-        position: absolute;
-        bottom: auto;
-        top: 0;
-        left: auto;
-        right: 0;
-        width: max-content;
-        border-radius: 0 20px;
-        padding: 0 20px;
-        box-shadow: none;
-    }
-    .navbar-list {
-        gap: 30px;
-        padding: 0 20px;
-    }
-    .navbar-link {
-        font-weight: var(--fw-500);
-    }
+/**
+ * NAVBAR
+ */
+/**
+ * NAVBAR
+ */
+ .navbar {
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: max-content;
+    border-radius: 0 20px;
+    padding: 0 20px;
+    box-shadow: none;
+}
+.navbar-list {
+    gap: 30px;
+    padding: 0 20px;
+}
+.navbar-link {
+    font-weight: var(--fw-500);
+}
     /**
    * ABOUT
    */
@@ -1903,6 +1962,22 @@ textarea.form-input::-webkit-resizer {
     }
     body::-webkit-scrollbar-button {
         height: 60px;
+    }
+    .resume[data-page="gallery"] {
+        height: 800px; /* Custom height */
+        width: 950px; /* Custom width */
+        margin: 0 auto; /* Center the container */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        border-radius: 15px; /* Curve the edges */
+    }
+    .page-indicator {
+        position: absolute;
+        bottom: 100px;
+        right: 1000px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 0px;
+        border-radius: 5px;
     }
     /**
    * REUSED STYLE
@@ -2001,9 +2076,11 @@ mark.blue {
 /* pdf */
 #pdf-slideshow {
     width: 100%;
-    height: 700px;
+    height: 500px;
     overflow: hidden;
     position: relative;
+    transform: scale(1.1); /* Zoom in the content */
+    transform-origin: center; /* Ensure the zoom is centered */
 }
 .arrow {
     position: absolute;
@@ -2017,54 +2094,169 @@ mark.blue {
     z-index: 10;
 }
 .arrow-left {
-    left: 10px;
+    left:4px;
 }
 .arrow-right {
-    right: 10px;
+    right: 4px;
+}
+
+.page-indicator {
+    position: absolute;
+    bottom: 10px;
+    right: 1000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0px;
+    border-radius: 5px;
+}
+#page-indicator {
+    bottom: 2px; /* Adjust the distance from the bottom for mobile screens */
+    right: 135px; /* Adjust the distance from the right for mobile screens */
+    padding: 5px; /* Decrease the padding for mobile screens */
+    font-size: 10px; /* Decrease the font size for mobile screens */
 }
 
 /* Media query for mobile screens */
-@media (max-width: 768px) {
+@media (min-width: 450px) {
     #pdf-slideshow {
         height: 400px; /* Adjust the height for mobile screens */
+        height: 400px; /* Adjust the height for mobile screens */
+        width: 100%; /* Adjust the width for mobile screens */
+        transform: scale(1.6); /* Zoom in the content */
+        transform-origin: center; /* Ensure the zoom is centered */
+        overflow: hidden; /* Hide overflow */
     }
     .arrow {
-        padding: 10px; /* Decrease the padding for mobile screens */
-        font-size: 18px; /* Decrease the font size for mobile screens */
+        padding: 1px; /* Decrease the padding for mobile screens */
+        font-size: 20px; /* Decrease the font size for mobile screens */
     }
     .arrow-left {
-        left: 10px; /* Adjust the distance from the left for mobile screens */
+        left: 100px; /* Adjust the distance from the left for mobile screens */
     }
     .arrow-right {
-        right: 10px; /* Adjust the distance from the right for mobile screens */
+        right: 100px; /* Adjust the distance from the right for mobile screens */
     }
     #page-indicator {
-        bottom: 10px; /* Adjust the distance from the bottom for mobile screens */
-        right: 10px; /* Adjust the distance from the right for mobile screens */
+        bottom: 2px; /* Adjust the distance from the bottom for mobile screens */
+        right: 120px; /* Adjust the distance from the right for mobile screens */
         padding: 5px; /* Decrease the padding for mobile screens */
-        font-size: 14px; /* Decrease the font size for mobile screens */
+        font-size: 10px; /* Decrease the font size for mobile screens */
     }
 }
 
 /* Media query for mobile screens */
-@media (max-width: 448px) {
+@media (min-width: 580px) {
     #pdf-slideshow {
-        height: 300px; /* Adjust the height for mobile screens */
+        height: 400px; /* Adjust the height for mobile screens */
+        width: 100%; /* Adjust the width for mobile screens */
+        transform: scale(1.6); /* Zoom in the content */
+        transform-origin: center; /* Ensure the zoom is centered */
+        overflow: hidden; /* Hide overflow */
+        
+        margin-top: 140px;
     }
     .arrow {
-        padding: 10px; /* Decrease the padding for mobile screens */
-        font-size: 18px; /* Decrease the font size for mobile screens */
+        padding: 1px; /* Decrease the padding for mobile screens */
+        font-size: 20px; /* Decrease the font size for mobile screens */
     }
     .arrow-left {
-        left: 10px; /* Adjust the distance from the left for mobile screens */
+        left: 100px; /* Adjust the distance from the left for mobile screens */
     }
     .arrow-right {
-        right: 10px; /* Adjust the distance from the right for mobile screens */
+        right: 100px; /* Adjust the distance from the right for mobile screens */
     }
     #page-indicator {
-        bottom: 10px; /* Adjust the distance from the bottom for mobile screens */
-        right: 10px; /* Adjust the distance from the right for mobile screens */
+        bottom: 2px; /* Adjust the distance from the bottom for mobile screens */
+        right: 120px; /* Adjust the distance from the right for mobile screens */
         padding: 5px; /* Decrease the padding for mobile screens */
-        font-size: 14px; /* Decrease the font size for mobile screens */
+        font-size: 10px; /* Decrease the font size for mobile screens */
     }
 }
+
+/* Media query for mobile screens */
+@media (min-width: 768px) {
+    #pdf-slideshow {
+        height: 400px; /* Adjust the height for mobile screens */
+        width: 100%; /* Adjust the width for mobile screens */
+        transform: scale(1.6); /* Zoom in the content */
+        transform-origin: center; /* Ensure the zoom is centered */
+        overflow: hidden; /* Hide overflow */
+        
+        margin-top: 140px;
+    }
+    .arrow {
+        padding: 1px; /* Decrease the padding for mobile screens */
+        font-size: 20px; /* Decrease the font size for mobile screens */
+    }
+    .arrow-left {
+        left: 180px; /* Adjust the distance from the left for mobile screens */
+    }
+    .arrow-right {
+        right: 180px; /* Adjust the distance from the right for mobile screens */
+    }
+    #page-indicator {
+        bottom: 2px; /* Adjust the distance from the bottom for mobile screens */
+        right: 210px; /* Adjust the distance from the right for mobile screens */
+        padding: 5px; /* Decrease the padding for mobile screens */
+        font-size: 10px; /* Decrease the font size for mobile screens */
+    }
+}
+
+/* Media query for mobile screens */
+@media (min-width: 1024px) {
+    #pdf-slideshow {
+        height: 400px; /* Adjust the height for mobile screens */
+        width: 100%; /* Adjust the width for mobile screens */
+        transform: scale(1.6); /* Zoom in the content */
+        transform-origin: center; /* Ensure the zoom is centered */
+        overflow: hidden; /* Hide overflow */
+        
+        margin-top: 140px;
+    }
+    .arrow {
+        padding: 1px; /* Decrease the padding for mobile screens */
+        font-size: 20px; /* Decrease the font size for mobile screens */
+    }
+    .arrow-left {
+        left: 310px; /* Adjust the distance from the left for mobile screens */
+    }
+    .arrow-right {
+        right: 310px; /* Adjust the distance from the right for mobile screens */
+    }
+    #page-indicator {
+        bottom: 2px; /* Adjust the distance from the bottom for mobile screens */
+        right: 335px; /* Adjust the distance from the right for mobile screens */
+        padding: 5px; /* Decrease the padding for mobile screens */
+        font-size: 10px; /* Decrease the font size for mobile screens */
+    }
+}
+
+/* Media query for mobile screens */
+@media (min-width: 1250px) {
+    #pdf-slideshow {
+        height: 400px; /* Adjust the height for mobile screens */
+        width: 100%; /* Adjust the width for mobile screens */
+        transform: scale(1.8); /* Zoom in the content */
+        transform-origin: center; /* Ensure the zoom is centered */
+        overflow: hidden; /* Hide overflow */
+        
+        margin-top: 140px;
+    }
+    .arrow {
+        padding: 1px; /* Decrease the padding for mobile screens */
+        font-size: 20px; /* Decrease the font size for mobile screens */
+    }
+    .arrow-left {
+        left: 310px; /* Adjust the distance from the left for mobile screens */
+    }
+    .arrow-right {
+        right: 310px; /* Adjust the distance from the right for mobile screens */
+    }
+    #page-indicator {
+        bottom: 2px; /* Adjust the distance from the bottom for mobile screens */
+        right: 335px; /* Adjust the distance from the right for mobile screens */
+        padding: 5px; /* Decrease the padding for mobile screens */
+        font-size: 10px; /* Decrease the font size for mobile screens */
+    }
+}
+
