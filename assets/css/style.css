@@ -281,7 +281,7 @@ article.active {
 
 main {
     margin: 15px 12px;
-    margin-bottom: 75px;
+    margin-bottom: 75px; 
     min-width: 259px;
 }
 
@@ -1441,7 +1441,7 @@ textarea.form-input::-webkit-resizer {
     article {
         width: auto;
         margin-inline: auto;
-        padding: 30px;
+        padding: 20px;
     }
     .article-title {
         font-weight: var(--fw-600);
@@ -1477,16 +1477,16 @@ textarea.form-input::-webkit-resizer {
     /**
    * #MAIN
    */
-    main {
-        margin-top: 60px;
-        margin-bottom: 100px;
-    }
+    /* main { */
+        /* margin-top: 60px; */
+        /* margin-bottom: 100px; */
+    /* } */
     /**
    * #SIDEBAR
    */
     .sidebar {
         max-height: 265px;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
     }
     .sidebar.active {
         max-height: 584px;
@@ -1507,8 +1507,8 @@ textarea.form-input::-webkit-resizer {
         padding: 5px 18px;
     }
     .info_more-btn {
-        top: -30px;
-        right: -30px;
+        top: -20px;
+        right: -20px;
         padding: 10px 15px;
     }
     .info_more-btn span {
@@ -1535,7 +1535,7 @@ textarea.form-input::-webkit-resizer {
         border-radius: 20px 20px 0 0;
     }
     .navbar-list {
-        gap: 20px;
+        gap: 10px;
     }
     .navbar-link {
         --fs-8: 14px;
@@ -2298,3 +2298,41 @@ mark.blue {
     }
 }
 
+
+.marquee-item {
+    display: inline-block;
+    white-space: nowrap;
+    color: white; /* Proper white text color */
+    font-size: var(--fs-6); /* Font size matching the theme */
+    font-family: var(--ff-poppins); /* Font family matching the theme */
+    font-weight: var(--fw-600); /* Make the text thicker and bold */
+}
+
+.date-button {
+    font-weight: bold;
+    color: var(--orange-yellow-crayola); /* Text color matching the theme */
+    background-color: var(--eerie-black-1); /* Background color matching the theme */
+    border: 1px solid var(--jet); /* Border color matching the theme */
+    padding: 2px 5px;
+    border-radius: 3px;
+    cursor: default;
+    display: inline-block;
+}
+
+.yellow {
+    display: inline;
+    font-size: var(--fs-6); /* Font size matching the theme */
+    font-family: var(--ff-poppins); /* Font family matching the theme */
+    color: var(--orange-yellow-crayola); /* Text color matching the theme */
+}
+
+.link {
+    color: var(--orange-yellow-crayola); /* Link color matching the theme */
+    font-size: var(--fs-6); /* Font size matching the theme */
+    font-family: var(--ff-poppins); /* Font family matching the theme */
+    font-weight: var(--fw-600); /* Make the link text thicker and bold */
+}
+
+.link:hover {
+    text-decoration: underline; 
+}
