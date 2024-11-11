@@ -382,9 +382,14 @@
                 </marquee>
                 <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
                     <div class="timeline-item">
-                        <button class="date-button">[Sept 27, 2024]</button> <b>Wrapped up <mark class='yellow'>Google Cloud Arcade Facilitator Program 2024</mark> as an Facilitator, where I guided <mark class='yellow'> 200+ students </mark> from over <mark class='yellow'>45 institutions</mark> across India for a duration of 2 months. <a href="https://www.linkedin.com/posts/harsh-yadav-882189195_gcaf-wrapup-activity-7246385776303693824-4HH-?utm_source=share&utm_medium=member_desktop" class="yellow link">[Link]</b></a>
+                        <button class="date-button">[Oct 7, 2024]</button> <b>Secured <mark class='yellow'>1st Rank</mark> out of 1600+ registratiions in the Data Analytics Hackathon; <mark class='yellow'>SKYHACK 2.0 </mark> organised by United Airlines. <a href="https://www.linkedin.com/posts/harsh-yadav-882189195_skyhack-activity-7259631404232134656-Wl9j?utm_source=share&utm_medium=member_desktop" class="yellow link">[Link]</b></a>
                     </div>
                 </marquee>
+                <!-- <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                    <div class="timeline-item">
+                        <button class="date-button">[Sept 27, 2024]</button> <b>Wrapped up <mark class='yellow'>Google Cloud Arcade Facilitator Program 2024</mark> as an Facilitator, where I guided <mark class='yellow'> 200+ students </mark> from over <mark class='yellow'>45 institutions</mark> across India for a duration of 2 months. <a href="https://www.linkedin.com/posts/harsh-yadav-882189195_gcaf-wrapup-activity-7246385776303693824-4HH-?utm_source=share&utm_medium=member_desktop" class="yellow link">[Link]</b></a>
+                    </div>
+                </marquee> -->
                 <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
                     <div class="timeline-item">
                         <button class="date-button">[Sept 15, 2024]</button> <b>Secured <mark class='yellow'>6th Rank</mark> out of 350+ teams in the Phase 1 of National Level Hackathon; <mark class='yellow'>Datathon @ IndoML 2024</mark> organised by BITS Goa and NielsenIQ. <a href="https://www.linkedin.com/posts/harsh-yadav-882189195_datathon-hackathon-innovation-activity-7242895333167374339-TdPc?utm_source=share&utm_medium=member_desktop" class="yellow link">[Link]</b></a>
@@ -665,6 +670,34 @@
 
                 </li>
 
+
+            </ol>
+
+        </section>
+
+        <section class="timeline">
+
+            <div class="title-wrapper">
+                <div class="icon-box">
+                    <ion-icon name="airplane"></ion-icon>
+                </div>
+
+                <h3 class="h3">Scholarships & Travel Grants</h3>
+            </div>
+
+            <ol class="timeline-list">
+
+
+                <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">
+                        Datathon Winners Grant, awarded for attending 
+                        <a href="https://indoml.in/index.php" style="display: inline;">
+                            <mark class='yellow' style="display: inline;">IndoML 2024</mark>
+                        </a> 
+                        @ BITS Pilani Goa Campus
+                    </h4>
+                    <span>21-23 December, 2024</span>
+                </li>
 
             </ol>
 
@@ -971,6 +1004,13 @@
                 <ul class="achievements-list has-scrollbar">
                     <li class="achievements-item">
                         <a
+                            href="https://www.linkedin.com/posts/harsh-yadav-882189195_skyhack-activity-7259631404232134656-Wl9j?utm_source=share&utm_medium=member_desktop">
+                            <img src="./assets/images/ua.jpg" alt="certifications logo">
+                        </a>
+                    </li>
+
+                    <li class="achievements-item">
+                        <a
                             href="https://drive.google.com/file/d/1Svcr1-UZl6rTt2VYFR4wttAhbmTh4XBu/view?usp=share_link">
                             <img src="./assets/images/new_c/IMG_202310429_180507.jpg" alt="certifications logo">
                         </a>
@@ -1255,20 +1295,52 @@
             <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
             <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
             <div id="page-indicator" class="page-indicator">
-                 <!--Page indicator will be updated here -->
+                <!-- Page indicator will be updated here -->
             </div>
+        </div>
+        <div id="loading-spinner" class="loading-spinner">
+            <!-- Loading spinner -->
+            <div class="spinner"></div>
         </div>
     </article>
     
+    <style>
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none; /* Initially hidden */
+        }
+    
+        .spinner {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite;
+        }
+    
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
     <script type="module">
-        const url = './assets/images/frame.pdf'; // Path to your PDF file
+        const url = './assets/images/12_Nov.pdf'; // Path to your PDF file
         const container = document.getElementById('pdf-slideshow');
         const pageIndicator = document.getElementById('page-indicator');
+        const loadingSpinner = document.getElementById('loading-spinner');
         let pdfDoc = null;
         let pages = [];
         let intervalId;
         let index = 0;
         const intervalTime = 2000; // Increase the timer to 3 seconds
+    
+        // Show the loading spinner
+        loadingSpinner.style.display = 'block';
     
         // Load the PDF
         pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
@@ -1279,6 +1351,8 @@
             }
         }).catch(function(error) {
             console.error('Error loading PDF:', error);
+            // Hide the loading spinner in case of error
+            loadingSpinner.style.display = 'none';
         });
     
         // Render a page
@@ -1302,12 +1376,18 @@
                     pages.push(canvas.toDataURL());
                     if (pages.length === pdfDoc.numPages) {
                         startSlideshow();
+                        // Hide the loading spinner once all pages are rendered
+                        loadingSpinner.style.display = 'none';
                     }
                 }).catch(function(error) {
                     console.error('Error rendering page', num, error);
+                    // Hide the loading spinner in case of error
+                    loadingSpinner.style.display = 'none';
                 });
             }).catch(function(error) {
                 console.error('Error getting page', num, error);
+                // Hide the loading spinner in case of error
+                loadingSpinner.style.display = 'none';
             });
         }
     

@@ -280,9 +280,9 @@ article.active {
 \*-----------------------------------*/
 
 main {
-    margin: 15px 12px;
+    margin: 30px 12px;
     margin-bottom: 75px; 
-    min-width: 259px;
+    min-width: 200px;
 }
 
 
@@ -2010,7 +2010,7 @@ textarea.form-input::-webkit-resizer {
    */
     .sidebar {
         position: sticky;
-        top: 60px;
+        /* top: 60px; */
         max-height: max-content;
         height: 100%;
         margin-bottom: 0;
